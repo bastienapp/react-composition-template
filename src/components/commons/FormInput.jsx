@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './FormInput.css';
 
 function FormInput({
@@ -25,5 +26,19 @@ function FormInput({
     </label>
   );
 }
+
+FormInput.defaultProps = {
+  placeholder: '',
+  required: false,
+};
+
+FormInput.propTypes = {
+  name: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['email', 'text', 'number']).isRequired,
+  placeholder: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  onChange: PropTypes.func.isRequired,
+  required: PropTypes.bool,
+};
 
 export default FormInput;

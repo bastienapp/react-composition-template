@@ -1,16 +1,10 @@
 import React from 'react';
-import Product from '../../../util/Product';
+import PropTypes from 'prop-types';
 import MainLayout from '../../layouts/MainLayout';
 import ProductItem from './ProductItem';
+import Product from '../../../util/Product';
 
-const products = [
-  new Product(1, 'Product 1'),
-  new Product(2, 'Product 2'),
-  new Product(3, 'Product 3'),
-  new Product(4, 'Product 4'),
-];
-
-function ProductList() {
+function ProductList({ products }) {
   return (
     <MainLayout>
       <ul>
@@ -21,5 +15,9 @@ function ProductList() {
     </MainLayout>
   );
 }
+
+ProductList.propTypes = {
+  products: PropTypes.arrayOf(PropTypes.instanceOf(Product)).isRequired,
+};
 
 export default ProductList;

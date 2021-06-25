@@ -23,7 +23,8 @@ function Contact() {
     setForm(formDefault);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     alert(JSON.stringify(form));
     reset();
   };

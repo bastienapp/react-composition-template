@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function ProductItem({ name }) {
   return (
@@ -7,5 +8,9 @@ function ProductItem({ name }) {
     </li>
   );
 }
+
+ProductItem.propTypes = {
+  name: PropTypes.string.isRequired,
+};
 
 export default ProductItem;
