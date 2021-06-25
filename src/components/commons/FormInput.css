@@ -1,0 +1,8 @@
+.FormInput {
+  display: block;
+  padding-bottom: 10px;
+}
+.FormInput input,
+.FormInput textarea {
+  display: block;
+}

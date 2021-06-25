@@ -2,10 +2,10 @@ import React from 'react';
 import Button from './Button';
 
 function SecondaryButton(props) {
-  const { children, onClick } = props;
+  const { children, onClick, type = 'button' } = props;
 
   return (
-    <Button onClick={onClick} type="secondary-button">
+    <Button onClick={onClick} className="secondary-button" type={type}>
       {children}
     </Button>
   );

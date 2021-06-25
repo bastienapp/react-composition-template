@@ -1,11 +1,12 @@
+/* eslint-disable react/button-has-type */
 import React from 'react';
 import './Button.css';
 
 function Button(props) {
-  const { children, type, onClick } = props;
+  const { children, className, type = 'button', onClick } = props;
 
   return (
-    <button className={type} type="button" onClick={onClick}>
+    <button className={className} type={type} onClick={onClick}>
       {children}
     </button>
   );
