@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Contact from '../views/Contact';
 import Home from '../views/Home';
-import ProductList from '../views/ProductList';
+import ProductList from '../views/ProductListView/ProductList';
 
 function MainRouter() {
   return (
